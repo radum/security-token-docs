@@ -12,4 +12,4 @@ If you want to learn how to use your device, explore relevant [Use Cases](Use_Ca
 
 Common questions are covered in [Frequently Asked Questions](FAQs.md).
 
-For anything else please contact lance@lrvick.net or file an issue.
+Originally forked from [lrvick/security-token-docs](https://github.com/lrvick/security-token-docs).
