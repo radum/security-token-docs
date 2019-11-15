@@ -51,6 +51,36 @@ the included commits.
 
 ## Setup
 
+### GPG
+
+Follow the instructions from GPG advanced.
+
+TODO:
+
+Check if the above flow removes the generated keys from the machine completely and signing won't work, requirig an import of the keys.
+
+https://micropipes.com/blog/2016/08/31/signing-your-commits-on-github-with-a-gpg-key/
+
+```
+gpg --import ../{key hash}.master.asc
+gpg --import ../{key hash}.public.asc
+```
+
+#### GPG Config options
+
+If you don't want to type your password all the time, put the following in `~/.gnupg/gpg-agent.conf`:
+
+```
+default-cache-ttl 3942000
+max-cache-ttl 3942000
+```
+
+To get a prompt window to put your password use pinentry-mac app and edit `~/.gnupg/gpg-agent.conf`:
+
+```
+pinentry-program /usr/local/bin/pinentry-mac
+```
+
 ### Git
 
 Adjust your ~/.gitconfig to be similar to the following:
@@ -61,7 +91,7 @@ Adjust your ~/.gitconfig to be similar to the following:
     name = John H. Doe
     signingKey = 6B61ECD76088748C70590D55E90A401336C8AAA9 # get from 'gpg --list-keys --with-colons'
 [commit]
-    gpgSign = true
+    gpgsign = true
 [gpg]
-    program = gpg2
+    program = /usr/local/bin/gpg
 ```
