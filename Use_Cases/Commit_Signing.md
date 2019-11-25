@@ -95,3 +95,7 @@ Adjust your ~/.gitconfig to be similar to the following:
 [gpg]
     program = /usr/local/bin/gpg
 ```
+
+### Articles
+
+* https://micropipes.com/blog/2016/08/31/signing-your-commits-on-github-with-a-gpg-key/
